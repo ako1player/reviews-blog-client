@@ -10,7 +10,7 @@ const AddCommentForm = ({movieName, onMovieUpdated}) =>{
     const addComment = async () =>{
         const token = user && await user.getIdToken();
         const headers = token ? {authtoken: token} : {};
-        const response = await axios.post(`/api/movies/${movieName}/comments`,{
+        const response = await axios.post(`https://reviews-blog.herokuapp.com/api/movies/${movieName}/comments`,{
             postedBy: name,
             text: comment,
         }, {headers});
