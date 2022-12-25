@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Navbar from './Navbar';
+import HomePage from './pages/HomePage';
+import MovieListPage from './pages/MovieListPage';
+import MoviePage from './pages/MoviePage';
+import AnimeListPage from './pages/AnimeListPage';
+import NotFoundPage from './pages/NotFoundPage';
+import LoginPage from './pages/LoginPage';
+import CreateAccountPage from './pages/CreateAccountPage';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+        <div>{/** Page Body **/}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/movies" element={<MovieListPage />} />
+            <Route path="/movies/:movieId" element={<MoviePage />} />
+            <Route path="/anime" element={<AnimeListPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/create-account" element={<CreateAccountPage />} />
+            <Route path="/*" element={<NotFoundPage />} />
+          </Routes>
+        </div>{/** End Page Body **/}
     </div>
+    </BrowserRouter>
   );
 }
 
