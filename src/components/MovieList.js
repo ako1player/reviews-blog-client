@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const MovieList = ({movies}) => {
     return (
-        <div className='grid grid-cols-4 gap-4 pl-2'>
+        <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-4 pl-2'>
             {movies.map((movie, key) =>(
                 <div key={key} className="max-w-sm rounded overflow-hidden shadow-lg border border-jadeGreen-800 hover:bg-jadeGreen-700">
                     <Link to={`/movies/${movie.name}`}>
