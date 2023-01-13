@@ -1,5 +1,7 @@
 import RecentMovies from "../components/RecentMovies";
+import RecentAnimes from "../components/RecentAnimes";
 import movies from "./movie-content";
+import animes from "./anime-content";
 
 const HomePage = () =>{
     return (
@@ -10,7 +12,10 @@ const HomePage = () =>{
                 <h1>Recent Movie Reviews:</h1>
                 <RecentMovies movies={movies} />
             </div>
-            <h1>Recent Anime Reviews:</h1>
+            <div>
+                <h1>Recent Anime Reviews:</h1>
+                <RecentAnimes animes={animes} />
+            </div>
         </div>
     )
 }
