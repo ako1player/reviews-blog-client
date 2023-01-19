@@ -4,7 +4,7 @@ import MovieList from "../components/MovieList";
 const MovieListPage = () =>{
     return(
         <div className="text-center">
-            <h1 className="text-jadeGreen-800 text-3xl">Movies Reviewed</h1>
+            <h1 className="pb-4 text-jadeGreen-800 text-3xl">Movies Reviewed</h1>
             <div>
                 <div>
                     <MovieList movies={movies} />

@@ -7,6 +7,7 @@ import AnimeListPage from './pages/AnimeListPage';
 import NotFoundPage from './pages/NotFoundPage';
 import LoginPage from './pages/LoginPage';
 import CreateAccountPage from './pages/CreateAccountPage';
+import AnimePage from './pages/AnimePage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/movies" element={<MovieListPage />} />
             <Route path="/movies/:movieId" element={<MoviePage />} />
             <Route path="/anime" element={<AnimeListPage />} />
+            <Route path="/animes/:animeId" element={<AnimePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/create-account" element={<CreateAccountPage />} />
             <Route path="/*" element={<NotFoundPage />} />
