@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Nokora&display=swap');
 html{
-    background-color: #18286b;
+    background-color: #e4e3e7;
+    font-family: 'Nokora', 'sans-serif';
 }
